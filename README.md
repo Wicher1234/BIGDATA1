@@ -1,2 +1,14 @@
-# BIGDATA1
-This is for practice of bigdata
+# Devops Pipline
+pipeline {
+  agent {
+    docker { image 'node:16-alpine' }
+  }
+  stages {
+    stage('Test') {
+      steps {
+        sh 'node --version'
+      }
+    }
+  }
+}
+
